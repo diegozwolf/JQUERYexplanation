@@ -14,5 +14,5 @@
 //  agregar este codigo al archivo de javascript
 
 $('div').on('click', function() {
-    $(this).css('background', 'yellow');
+    $('div').css('background', 'yellow');
 });
