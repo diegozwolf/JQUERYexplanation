@@ -63,6 +63,53 @@ $('div').addClass("active")
         .append("<p>Hola Mundo</p>");
 
 
+// EVENTOS 
+
+$('p').click(function() {
+    alert("Hiciste click sobre un párrafo");
+});
+
+// EVENTOS DEL MOUSE
+// click
+// dblclick - doble click
+// mouseenter - se dispara cuando el mouse entra sobre alguno de los elementos seleccionados.
+// mouseleave - se dispara cuando el mouse sale de alguno de los elementos seleccionados.
+// mouseover - se dispara cuando el mouse entra o sale de alguno de los elementos seleccionados.
+// mousemove - se dispara cuando el mouse se mueve dentro de alguno de los elementos seleccionados.
+
+
+$(document).on('mousemove', function(e) {
+    console.log("El mouse se encuentra en las coordenadas:" + e.pageX + ", " + e.pageY);
+});
+
+// La función que le pasamos al método on recibe un argumento con información del evento. Por ejemplo, a través de este objeto podemos obtener la posición del mouse cada vez que se mueve:
+
+// EVENTOS DEL TECLADO
+// keydown - se dispara cuando oprimes una tecla.
+// keypress - similar a keydown pero no aplica para teclas como Shift, Esc, Alt.
+// keyup - se dispara cuando sueltas una tecla.
+
+$(document).on('keyup', function(e) {
+    console.log("La tecla oprimida fue " + e.which);
+});
+
+// El método which del evento retorna el código de la tecla oprimida:
+
+
+// EVENTOS DE FORMULARIOS
+// blur - se dispara cuando un elemento pierde el foco.
+// change - se dispara cuando un elemento cambia.
+// focus - se dispara cuando un elemento recibe el foco.
+// submit - se dispara cuando el formulario se envía.
+
+// $( document ).ready()
+
+// Si debes esperar a que toda la página cargue puedes usar el evento 
+$(document).ready(function() {
+    console.log( "ready!" );
+});
+
+
 
 
 
